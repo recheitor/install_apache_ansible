@@ -3,3 +3,5 @@
   roles:
     - ../roles/install_apache
   become: true
+  vars:
+    doc_root: /var/www/example
