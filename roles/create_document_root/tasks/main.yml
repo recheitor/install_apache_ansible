@@ -1,8 +1,2 @@
 - name: Create custom document root
-  hosts: all
-  become: true
-  vars:
-    doc_root: /var/www/example
-  tasks:
-    - name: Create custom document root
-      file: path={{ doc_root }} state=directory owner=www-data group=www-data
+  file: path={{ doc_root }} state=directory owner=www-data group=www-data

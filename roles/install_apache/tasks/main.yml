@@ -1,6 +1,2 @@
 - name: Install Apache
-  hosts: all
-  become: true
-  tasks:
-    - name: Install Apache
-      apt: name=apache2 state=latest
+  apt: name=apache2 state=latest

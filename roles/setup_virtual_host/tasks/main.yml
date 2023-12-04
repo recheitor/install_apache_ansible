@@ -1,7 +1,3 @@
 - name: Set up Apache virtual host file
-  hosts: all
-  become: true
-  tasks:
-    - name: Set up Apache virtual host file
-      template: src=vhost.tpl dest=/etc/apache2/sites-available/000-default.conf
-      notify: restart apache
+  template: src=vhost.tpl dest=/etc/apache2/sites-available/000-default.conf
+  notify: restart apache
