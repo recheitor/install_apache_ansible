@@ -13,17 +13,17 @@
 - name: Create custom document root
   hosts: all
   roles:
-    - ../roles/create_custom_document_root
+    - ../roles/create_document_root
   become: true
 
 - name: Set up HTML file
   hosts: all
   roles:
-    - ../roles/set_up_html_file
+    - ../roles/setup_html_file
   become: true
 
 - name: Set up Apache virtual host file
   hosts: all
   roles:
-    - ../roles/set_up_apache_virtual_host_file
+    - ../roles/setup_virtual_host
   become: true
