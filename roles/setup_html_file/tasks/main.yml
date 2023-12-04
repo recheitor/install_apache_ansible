@@ -1,0 +1,8 @@
+- name: Set up HTML file
+  hosts: all
+  become: true
+  vars:
+    doc_root: /var/www/example
+  tasks:
+    - name: Set up HTML file
+      copy: src=index.html dest={{ doc_root }}/index.html owner=www-data group=www-data mode=0644
