@@ -1,29 +1,5 @@
-- name: Update apt
-  hosts: all
-  roles:
-    - ../roles/update_apt
-  become: true
-
 - name: Install Apache
   hosts: all
   roles:
     - ../roles/install_apache
-  become: true
-
-- name: Create custom document root
-  hosts: all
-  roles:
-    - ../roles/create_document_root
-  become: true
-
-- name: Set up HTML file
-  hosts: all
-  roles:
-    - ../roles/setup_html_file
-  become: true
-
-- name: Set up Apache virtual host file
-  hosts: all
-  roles:
-    - ../roles/setup_virtual_host
   become: true

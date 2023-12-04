@@ -1,2 +1,0 @@
-- name: Create custom document root
-  file: path={{ doc_root }} state=directory owner=www-data group=www-data
