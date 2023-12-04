@@ -4,6 +4,10 @@
 - name: Install Apache
   apt: name=apache2 state=latest
 
+- name: Include webserver variables
+  include_vars:
+    file: vars/webserver.yml
+
 - name: Create custom document root
   file: path={{ doc_root }} state=directory owner=www-data group=www-data
 
